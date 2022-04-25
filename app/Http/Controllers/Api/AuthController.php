@@ -30,7 +30,7 @@ class AuthController extends Controller
                     'password' => bcrypt($request->get('password'))
                 ]);
 
-                return response()->json(['message' => "Succesful registration" ], 204);
+                return response()->json(['message' => "Succesful registration" ], 200);
             }
         // Return the errors from the validator and a failure flag.
         return response()->json([

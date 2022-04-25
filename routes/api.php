@@ -22,10 +22,11 @@ Route::group(['prefix' => 'auth'], function(){
 });
 
 Route::group(['prefix' => '/deliveries'], function(){
+    Route::get('/', [DeliveryController::class, 'index']);
     Route::post('/' , [DeliveryController::class, 'store']);
     Route::get('/{delivery}' , [DeliveryController::class, 'show']);
     Route::group(['prefix' => '/{delivery}'], function(){
-        
+        Route::patch('/', [DeliveryController::class, 'update']);
     });
 });
 
