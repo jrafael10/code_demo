@@ -23,6 +23,10 @@ Route::group(['prefix' => 'auth'], function(){
 
 Route::group(['prefix' => '/deliveries'], function(){
     Route::post('/' , [DeliveryController::class, 'store']);
+    Route::get('/{delivery}' , [DeliveryController::class, 'show']);
+    Route::group(['prefix' => '/{delivery}'], function(){
+        
+    });
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
