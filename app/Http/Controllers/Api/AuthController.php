@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Services\Authentication;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -44,8 +45,10 @@ class AuthController extends Controller
      *
      */
 
-    public function login()
+    public function login( Request $request)
     {
-
+        $authentication = new Authentication($request->all(), $request->user());
+        //return $request->user();
+        return $authentication->authenticateRequest();
     }
 }
