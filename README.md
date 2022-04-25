@@ -18,7 +18,7 @@ API Endpoints:
 <li>{your_localhost}/api/auth/register Http method: POST -->User registration> </li>
 <li>{your_localhost}/api/auth/login Http method: POST -->User login</li>
 <li>{your_localhost}/api/user -->Http method: GET the info of currently requesting user (Make sure you are passing the authentication token returned by login api before calling this endpoint. )</li>
-<li>{your_localhost}/api/deliveries -->Http method: POST. Store the delviery to database. Authentication token is required</li>
+<li>{your_localhost}/api/deliveries -->Http method: POST. Store the delivery to database. Authentication token is required</li>
 <li>{your_localhost}/api/deliveries/{delivery_id} --> Http method: PATCH . Update the delivery information. Authentication token is required </li>
 <li>{your_localhost}/api/deliveries/{delivery_id} -->Http method: GET request. Retrieve the details of a delivery by ID </li>
 <li>{your_localhost}/api/deliveries --> Http method: GET. List all the deliveries owned by the requesting user. Authentication token is required  </li>
