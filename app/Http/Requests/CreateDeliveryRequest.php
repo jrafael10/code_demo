@@ -30,4 +30,13 @@ class CreateDeliveryRequest extends FormRequest
 
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'recipient_address.required' => "recipient_address field is required",
+            'sender_address.required' => "sender_address field is required",
+            'add_info.required' => "add_info field is required"
+        ];
+    }
 }
